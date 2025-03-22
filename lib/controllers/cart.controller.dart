@@ -17,11 +17,11 @@ class CartController extends GetxController {
   void deleteProduct(Product product) {
     cartProducts.remove(product);
   }
-   void clearCart() {
+
+  void clearCart() {
     cartProducts.clear();
     mensaje.value = "Carrito vacío"; // Mensaje de confirmación
   }
 
   int get itemCount => cartProducts.length;
 }
-

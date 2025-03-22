@@ -28,7 +28,6 @@ class CartShop extends StatelessWidget {
                       itemCount: cc.cartProducts.length,
                       itemBuilder: (context, index) {
                         Product product = cc.cartProducts[index];
-
                         return CardProduct(
                           product: product,
                           onDelete: () {
@@ -61,7 +60,7 @@ class CartShop extends StatelessWidget {
                           duration: Duration(seconds: 2),
                         );
                       },
-                      child: Text("Pagar"),
+                      child: Text('Pagar ${cc.cartProducts.fold(0.0, (suma, product) => suma + product.price)}'),
                     ),
                   )
                 : SizedBox(); // Si el carrito está vacío, no mostrar el botón
