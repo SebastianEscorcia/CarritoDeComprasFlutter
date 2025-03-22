@@ -60,7 +60,7 @@ class CartShop extends StatelessWidget {
                           duration: Duration(seconds: 2),
                         );
                       },
-                      child: Text('Pagar ${cc.cartProducts.fold(0.0, (suma, product) => suma + product.price)}'),
+                      child: Text('Pagar \$${cc.totalPrice}'),
                     ),
                   )
                 : SizedBox(); // Si el carrito está vacío, no mostrar el botón
